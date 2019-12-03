@@ -1,0 +1,39 @@
+{
+    "name": "xwzgit/wechat-bus-laravel",
+    "description": "wechat open and message manager",
+    "license": "MIT",
+    "keywords": ["wechat", "juhe","laravel"],
+    "authors": [
+        {
+            "name": "Coder",
+            "email": "zhangxw@think-land.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "^5.1 || ^6.0",
+        "xwzgit/wechat-bus": "^1.0"
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "filp/whoops": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WeChatBus\\Laravel\\": "src/Laravel"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WeChatBus\\Laravel\\PayServiceProvider"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
